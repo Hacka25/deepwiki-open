@@ -23,7 +23,7 @@ RUN pip install --no-cache -r api/requirements.txt
 # Use Python 3.11 as final image
 FROM python:3.11-slim
 
-# Set working directory
+## Set working directory
 WORKDIR /app
 
 # Install Node.js and npm
