@@ -9,8 +9,8 @@ RUN npm ci --legacy-peer-deps
 
 FROM node_base AS node_builder
 WORKDIR /app
-#COPY --from=node_deps /app/node_modules ./node_modules
-#COPY --exclude=./api . .
+COPY --from=node_deps /app/node_modules ./node_modules
+COPY --exclude=./api . .
 RUN NODE_ENV=production npm run build
 
 FROM python:3.11-slim AS py_deps
