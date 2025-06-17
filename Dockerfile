@@ -20,7 +20,7 @@ ENV PATH="/opt/venv/bin:$PATH"
 COPY api/requirements.txt ./api/
 RUN pip install --no-cache -r api/requirements.txt
 
-# Use Python 3.11 as final image
+#### Use Python 3.11 as final image
 FROM python:3.11-slim
 
 # Set working directory
